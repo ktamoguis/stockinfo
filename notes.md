@@ -4,20 +4,21 @@ Menu
 -----
 
 #1st Screen
-Welcome to Stock Info
-Please choose which stock information you want to know about
-1. MBT
-2. AC
-3. BDO
-4. Exit App
+Welcome to Stock Info (Dow 30):
+Please select from the menu below:
+1. Display all stocks
+2. Pick stock
+3. Exit
 
-#2nd Screen
-You have chosen MBT
-See information below:
-Opening and Closing Price: P80.00, P85.00
-52 week High, 52 week Low: P110.00, P75.00
-Company Info:
-    "The company...."
-Please select:
-4. Return to Previous Menu
-5. Exit App
+#2nd Screen (Display all stocks)
+Display all 30 stocks
+Type "Exit" to leave or press "1" to return to main menu
+
+
+#3rd Screen (Pick stock)
+Enter the ticker code of the stock or type "Exit" to leave
+Type "Exit" to leave or press "1" to return to main menu
+
+
+#4th Screen (from Pick stock)
+Display one line for that stock
