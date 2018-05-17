@@ -19,7 +19,7 @@ class CommandLineInterface
     puts "2. Pick stock"
     puts "3. Exit"
     input = gets.strip
-    binding.pry
+    #binding.pry
 
     case input.to_i
     when 1
@@ -43,12 +43,18 @@ class CommandLineInterface
   end
 
   def display_all_stocks
-    puts "display all stocks"
+    #puts "display all stocks"
+    stockhash = {:name =>"GOOG"}
+    Stockinfo.new(stockhash).display_all_stocks
     second_menu
   end
 
   def pick_stock
-    puts "pick stock"
+    #puts "pick stock"
+    stockhash = {:name =>"AAPL"}
+    newstock = Stockinfo.new(stockhash)
+    #binding.pry
+    newstock.pick_stock
     second_menu
   end
 
