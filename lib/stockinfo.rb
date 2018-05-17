@@ -2,9 +2,9 @@
 
 require_relative "../lib/command_line_interface.rb"
 
-module Stockinfo
+#module Stockinfo
   # Your code goes here...
-end
+#end
 
 class Stockinfo
 
@@ -13,20 +13,24 @@ class Stockinfo
   @@all = []
 
   def initialize(stock_hash)
-    @symbol = stock_hash[:symbo]
+    @symbol = stock_hash[:symbol]
     @name = stock_hash[:name]
     @price = stock_hash[:price]
     @change = stock_hash[:change]
     @low = stock_hash[:low]
     @high = stock_hash[:high]
     @previousclose = stock_hash[:previousclose]
-    @@ll << self
+    @@all << self
   end
 
   def self.create_from_collection(stock_array)
     stock_array.each do |stock|
       Stockinfo.new(stock)
     end
+  end
+
+  def self.all
+    @@all
   end
 
 end
