@@ -6,6 +6,8 @@ require 'pry'
 
 class CommandLineInterface
 
+  BASEPATH = "https://www.cnbc.com/dow-components/"
+
   def run
     main_menu
   end
@@ -48,6 +50,11 @@ class CommandLineInterface
   def pick_stock
     puts "pick stock"
     second_menu
+  end
+
+  def generate_stock_info
+    stockarray = Scraper.scrapewebsite(BASEPATH)
+    Stockinfo.create_from_collection(stockarray)
   end
 
 
